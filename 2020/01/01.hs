@@ -1,3 +1,4 @@
+main :: IO ()
 main = do
   f1 <- readFile "input01.txt"
   f2 <- readFile "input01.txt"
