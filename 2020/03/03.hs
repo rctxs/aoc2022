@@ -1,5 +1,3 @@
-import Control.Arrow (ArrowChoice (left))
-
 main :: IO ()
 main = do
   f1 <- readFile "input01.txt"
