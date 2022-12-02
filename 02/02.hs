@@ -15,8 +15,8 @@ taskTwo = sum . map (roundScore' . parseLine) . lines
 parseLine :: String -> (Char, Char)
 parseLine line = (opponent, you)
   where
-    opponent = head (head (splitOn " " line))
-    you = head (last (splitOn " " line))
+    opponent = (head . head . splitOn " ") line
+    you = (head . last . splitOn " ") line
 
 roundScore :: (Char, Char) -> Int
 roundScore (opponent, you) = choosingScore you + outcomeScore opponent you
